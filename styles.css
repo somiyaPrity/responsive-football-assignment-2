@@ -19,12 +19,12 @@ main {
 /* ===================banner============= */
 .banner {
   background-color: #2d25a0;
-  padding: 20px;
+  padding: 100px 20px;
   display: flex;
   justify-content: center;
 }
 .banner-txt {
-  background-color: red;
+  /* background-color: red; */
   width: 485px;
   margin-right: 102px;
 }
@@ -51,11 +51,32 @@ main {
   color: #e02c6d;
 }
 .banner-img {
-  background-color: rosybrown;
+  /* background-color: rosybrown; */
+  width: 500px;
+  position: relative;
 }
-.football {
-  width: 40px;
-  height: 40px;
+.banner-player {
+  height: 285px;
+  width: 290px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transition: transform 0.1s ease-in;
+}
+.banner:hover .banner-player {
+  transform: rotate(30deg);
+  /* transform-origin: top right; */
+}
+.banner-football {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: 218px;
+  top: 160px;
+  transition: transform 0.4s ease-out 0.1s;
+}
+.banner:hover .banner-football {
+  transform: translateY(-150px);
 }
 /* ==============player============= */
 
