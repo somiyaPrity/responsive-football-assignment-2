@@ -15,6 +15,48 @@ main {
   flex-direction: column;
   align-items: center;
 }
+
+/* ===================banner============= */
+.banner {
+  background-color: #2d25a0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.banner-txt {
+  background-color: red;
+  width: 485px;
+  margin-right: 102px;
+}
+.banner-title {
+  font-weight: 700;
+  font-size: 64px;
+  color: #fff;
+  margin-bottom: 27px;
+}
+.banner-btn {
+  padding: 10px 24px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  background-color: #e02c6d;
+  border-color: transparent;
+  transition: all 0.5s linear;
+}
+.banner-btn i {
+  margin-left: 8px;
+}
+.banner-btn:hover {
+  background-color: #fff;
+  color: #e02c6d;
+}
+.banner-img {
+  background-color: rosybrown;
+}
+.football {
+  width: 40px;
+  height: 40px;
+}
 /* ==============player============= */
 
 .players {
@@ -48,8 +90,20 @@ main {
   margin-top: 0;
 }
 /* ==================football news========== */
+.news-title {
+  font-weight: 700;
+  color: #000;
+  font-size: 24px;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+.football-news {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 10px;
+}
 .news {
-  background-color: red;
   width: 300px;
   padding: 20px;
   display: flex;
@@ -67,6 +121,22 @@ main {
   font-weight: 500;
   font-size: 14px;
   color: #333;
+  text-decoration: none;
+  transition: all 0.5s linear;
+  margin-bottom: 30px;
+}
+.news-headline:hover {
+  color: #2d25a0;
+}
+.news-icon {
+  font-size: 12px;
+  color: #333;
+}
+.news-icon a {
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+  margin-left: 4px;
 }
 
 /* ================highlights================ */
@@ -81,6 +151,7 @@ main {
   color: #fff;
   font-size: 24px;
   margin-top: 0;
+  margin-bottom: 30px;
 }
 .highlights {
   display: flex;
@@ -132,6 +203,11 @@ iframe {
 .icon a i {
   font-size: 18px;
   color: #6c6c6c;
+  transition: all 0.5s linear;
+}
+.icon:hover a i {
+  font-size: 22px;
+  color: #000;
 }
 .footer-copyright {
   font-size: 18px;
