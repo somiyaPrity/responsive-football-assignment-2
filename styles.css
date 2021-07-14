@@ -4,6 +4,7 @@
 /* ==============common classes============= */
 body {
   font-family: 'Poppins', sans-serif;
+  margin: 0;
 }
 .container {
   width: 1080px;
@@ -46,9 +47,30 @@ main {
   color: #6c6c6c;
   margin-top: 0;
 }
+/* ==================football news========== */
+.news {
+  background-color: red;
+  width: 300px;
+  padding: 20px;
+  display: flex;
+}
+.news-img img {
+  height: 100px;
+  width: 120px;
+  border-radius: 10px;
+}
+.news-info {
+  margin-left: 15px;
+}
+.news-headline {
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+}
+
 /* ================highlights================ */
 .football-highlight {
-  width: 100%;
   padding: 60px 60px;
   background-color: #2d25a0;
   text-align: center;
@@ -89,17 +111,25 @@ iframe {
   height: 110px;
   margin-bottom: 20px;
 }
-
-.footer-icon a {
-  text-decoration: none;
-  height: 32px;
-  width: 32px;
-  border-radius: 100px;
-  background-color: #e2e2e2;
-  padding: 10px;
-  margin-right: 14px;
+.footer-icon {
+  display: flex;
+  justify-content: center;
 }
-.footer-icon a i {
+.icon {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #e2e2e2;
+  padding: 8px;
+  margin-right: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon a {
+  text-decoration: none;
+}
+.icon a i {
   font-size: 18px;
   color: #6c6c6c;
 }
