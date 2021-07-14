@@ -19,13 +19,17 @@ main {
 /* ===================banner============= */
 .banner {
   background-color: #2d25a0;
-  padding: 100px 20px;
   display: flex;
   justify-content: center;
 }
+.banner-content {
+  width: 1080px;
+  display: flex;
+  justify-content: center;
+  padding: 86px 0;
+}
 .banner-txt {
-  /* background-color: red; */
-  width: 485px;
+  width: 55%;
   margin-right: 102px;
 }
 .banner-title {
@@ -51,32 +55,15 @@ main {
   color: #e02c6d;
 }
 .banner-img {
-  /* background-color: rosybrown; */
-  width: 500px;
-  position: relative;
+  width: 45%;
 }
-.banner-player {
-  height: 285px;
-  width: 290px;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transition: transform 0.1s ease-in;
+.banner-img img {
+  width: 556.01px;
+  height: 438px;
 }
-.banner:hover .banner-player {
-  transform: rotate(30deg);
-  /* transform-origin: top right; */
-}
-.banner-football {
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  left: 218px;
-  top: 160px;
-  transition: transform 0.4s ease-out 0.1s;
-}
-.banner:hover .banner-football {
-  transform: translateY(-150px);
+.banner:hover .banner-img img {
+  transform: scale(1.2);
+  transition: transform 0.6s ease-in-out;
 }
 /* ==============player============= */
 
@@ -114,7 +101,7 @@ main {
 .news-title {
   font-weight: 700;
   color: #000;
-  font-size: 24px;
+  font-size: 30px;
   margin-top: 0;
   display: flex;
   justify-content: center;
@@ -161,24 +148,31 @@ main {
 }
 
 /* ================highlights================ */
-.football-highlight {
-  padding: 60px 60px;
-  background-color: #2d25a0;
+.football {
   text-align: center;
-  margin-top: 100px;
+  background-color: #2d25a0;
+  padding-top: 20px;
+  margin-top: 70px;
 }
+
 .section-title {
   font-weight: 700;
   color: #fff;
-  font-size: 24px;
-  margin-top: 0;
-  margin-bottom: 30px;
+  font-size: 30px;
 }
 .highlights {
+  padding: 60px 60px;
+  width: 1088px;
+  margin-top: 100px;
   display: flex;
   justify-content: center;
+  margin: 0 auto;
+}
+.final-highlight {
+  width: 60%;
 }
 .other-highlight {
+  width: 40%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 14px;
@@ -191,8 +185,7 @@ iframe {
 
 /* ===============footer================== */
 .footer-content {
-  width: 483.87px;
-  height: 213px;
+  width: 1088px;
   margin: 0 auto;
   margin-bottom: 63px;
   margin-top: 100px;
@@ -238,4 +231,178 @@ iframe {
   margin-bottom: 0;
 }
 
-/* https://sports.ndtv.com/football */
+/* ====================================
+       responsive css
+   ==================================== */
+
+/* mobile device */
+@media only screen and (max-width: 688px) {
+  /* ===========banner===== */
+  .banner-content {
+    width: 100%;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+  .banner-txt {
+    margin-right: 0px;
+    margin-left: 16px;
+  }
+  .banner-title {
+    font-size: 36px;
+  }
+  .banner-img {
+    margin-top: 50px;
+  }
+  .banner-img img {
+    width: 300px;
+    height: 230px;
+  }
+  /*======= player=========== */
+  .container {
+    width: 100%;
+  }
+  .players {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 14px;
+  }
+
+  /* ================football news======== */
+  .football-news {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .news-title {
+    font-size: 18px;
+    margin-top: 70px;
+  }
+  .news {
+    flex-direction: column;
+    align-items: center;
+  }
+  .news-info {
+    text-align: center;
+  }
+
+  /* ================highlights============== */
+
+  .section-title {
+    font-size: 18px;
+  }
+  .highlights {
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .other-highlight {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    margin-left: 0;
+  }
+  .final-highlight iframe {
+    width: 200px;
+    height: 200px;
+  }
+
+  /*  ===========footer================ */
+  .footer-content {
+    width: 100%;
+    margin-top: 54px;
+  }
+  .footer-logo {
+    width: 150px;
+    height: 63px;
+  }
+
+  .icon {
+    height: 26px;
+    width: 26px;
+  }
+  .icon a i {
+    font-size: 16px;
+  }
+}
+/* =========tablet device========== */
+
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+  /* banner */
+  .banner-content {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner-txt {
+    margin-right: 0px;
+    margin-left: 16px;
+  }
+  .banner-title {
+    font-size: 46px;
+  }
+  .banner-img {
+    margin-top: 50px;
+  }
+  .banner-img img {
+    width: 400px;
+    height: 330px;
+  }
+  /* player & news */
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .players,
+  .football-news {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-left: 20px;
+    padding-left: 2px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    justify-content: center;
+  }
+
+  /* ================highlights============== */
+
+  .section-title {
+    font-size: 30px;
+  }
+  .highlights {
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .other-highlight {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+  .final-highlight iframe {
+    width: 400px;
+    height: 400px;
+  }
+
+  /*  ===========footer================ */
+  .footer-content {
+    width: 100%;
+    margin-top: 54px;
+  }
+  .footer-logo {
+    width: 250px;
+    height: 100px;
+  }
+
+  .icon {
+    height: 26px;
+    width: 26px;
+  }
+  .icon a i {
+    font-size: 16px;
+  }
+}
